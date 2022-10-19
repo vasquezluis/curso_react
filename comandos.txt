@@ -1,0 +1,8 @@
+// iniciar proyecto de react
+npx create-react-app my-app
+
+// inciar servidor
+npm start
+
+// crear build
+npm run build
