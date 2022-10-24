@@ -1,27 +1,32 @@
-export function Greeting() {
+export function Greeting({ title, name = "user" }) {
+  console.log(title);
+  console.log(name);
+
   const user = {
     firstName: "Luis",
     lastName: "Vasquez",
   };
 
-  const married = true;
-
-  function add(x, y) {
-    return x + y;
-  }
-
   // operador ternario
+
   return (
-    <div>
-      <h1>{user.firstName}</h1>
-      <h3>{user.lastName}</h3>
-      <br />
-      <p>{married.toString()}</p>
-      <p>{add(10, 30)}</p>
-    </div>
+    <h1>
+      {title}, dice {name}
+    </h1>
   );
 }
 
-export function UserCard() {
-  return <h1>User Card</h1>;
+export function UserCard({ name, amount, married, address, greet }) {
+
+  return (
+    <>
+      <h1>{name}</h1>
+      <p>${amount}</p>
+      <p>{married ? "Married" : "Single"}</p>
+      <ul>
+        <li>{address.city}</li>
+        <li>{address.street}</li>
+      </ul>
+    </>
+  );
 }
