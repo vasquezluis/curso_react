@@ -8,6 +8,9 @@ import { Button } from "./Button";
 import { TaskCard } from "./Task";
 import { Posts, Products } from "./Posts";
 
+// hook de react
+import { useState, useEffect } from 'react';
+
 // import componente clase
 import { Saludar } from "./Saludar";
 
@@ -31,15 +34,52 @@ const handleChange = (e) => {
   console.log(e.target.value);
 };
 
+// uso de hook usestate
+function Counter() {
+  const [counter, setCounter] = useState(0)
+  
+  return (
+    <div>
+      <h3>Counter: {counter}</h3>
+      <button onClick={() => {
+        setCounter(counter  + 1)
+      }}>Sumar</button>
+      <button onClick={() => {
+        setCounter(counter - 1)
+      }}>Restart</button>
+      <button onClick={() => {
+        setCounter(0)
+      }}>Reiniciar</button>
+    </div>
+  );
+}
+
+function Save(){
+  const [mensaje, setMensaje] = useState('')
+
+  // useEffect
+  useEffect(function() {
+    console.log('render');
+  }, [ ]) // los corchetes pueden contener una variable para poder ejecutarse cuando esa variable cambie
+
+  return <div>
+    <input onChange={e => setMensaje(e.target.value)}/>
+    <button onClick={() => {
+      alert('el mensaje es: ' + mensaje)
+    }}>Save</button>
+  </div>
+}
+
+
+
+
 root.render(
   // fragment, etiqueta vacia
   <>
     {/* <Button text='Click me'/>
     <Button text='Pay'/>
     <Button text='' name='Joe'/> */}
-
     {/* props son atributos (parametros) para la funcion */}
-
     {/* <UserCard
       name="Luis V"
       amount={3000}
@@ -61,14 +101,10 @@ root.render(
         alert("Hello");
       }}
     /> */}
-
     <TaskCard ready={true} />
     <Saludar />
-
     <Button text="Saludar" />
-
     <input id="hola" onChange={handleChange} />
-
     <form
       onSubmit={(e) => {
         e.preventDefault();
@@ -78,10 +114,8 @@ root.render(
       <h2>Registro de ususarios</h2>
       <button>Send</button>
     </form>
-
     <Posts />
     <Products />
-
     {users.map((user, index) => {
       return (
         <div key={index}>
@@ -90,5 +124,9 @@ root.render(
         </div>
       );
     })}
+
+    <Counter />
+    <Save />
+
   </>
 );
