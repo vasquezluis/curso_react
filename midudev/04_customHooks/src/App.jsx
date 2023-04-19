@@ -2,7 +2,7 @@ import './App.css'
 import { useCatImage } from './hooks/useCatImage'
 import { useCatFact } from './hooks/useCatFact'
 
-import { Otro } from './components/Otro'
+// import { Otro } from './components/Otro'
 
 function App () {
   const { randomFact, threeWords, refreshRandomFact } = useCatFact()
@@ -18,7 +18,7 @@ function App () {
       <p>Fact: {randomFact}</p>
       <img src={imageURL} alt={threeWords} />
 
-      <Otro />
+      {/* <Otro /> */}
 
     </div>
   )
