@@ -1,0 +1,11 @@
+### -> install eslint with standard for typescript
+    npx eslint --init
+      select standard - browser - javascript format
+
+!!! Possible problem with eslint -> is already installed with the Vite's bundle
+    Delete all node_modules folder, delete the eslintrc.cjs, delete the package-lock.json
+    and the the eslint related modules in package.json file
+    Then, run eslint command again
+
+### -> configure Standard eslint for React with Typescript
+    Add "project": "./tsconfig.json" in "parserOptions" in .eslintrc.cjs file
