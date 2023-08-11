@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Drag from './components/Drag'
 
 // import components
 import { Greeting, UserCard } from "./Greetings";
@@ -127,6 +128,8 @@ root.render(
 
     <Counter />
     <Save />
+
+    <Drag />
 
   </>
 );
