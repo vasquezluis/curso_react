@@ -1,0 +1,7 @@
+// inicializacion del linter
+### -> npx eslint --init
+
+// configuracion en .eslintrc.js
+
+// instalar estilos para el todo
+ -> github -> todo mvc css

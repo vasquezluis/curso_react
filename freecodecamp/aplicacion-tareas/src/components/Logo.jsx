@@ -1,15 +1,15 @@
-import freeCodeCampLogo from "../images/freecodecamp-logo.png";
+import freeCodeCampLogo from '../images/freecodecamp-logo.png'
 import '../styles/Logo.css'
 
-function Logo() {
+function Logo () {
   return (
-    <div className="freecodecamp-logo-contenedor">
-        <img
-          src={freeCodeCampLogo}
-          className="freecodecamp-logo"
-          alt="logo de freecodecamp"
-        />
-      </div>
+    <div className='freecodecamp-logo-contenedor'>
+      <img
+        src={freeCodeCampLogo}
+        className='freecodecamp-logo'
+        alt='logo de freecodecamp'
+      />
+    </div>
   )
 }
 

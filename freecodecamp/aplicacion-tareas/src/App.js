@@ -1,18 +1,24 @@
-import "./App.css";
+import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import ListaDeTareas from "./components/ListaDeTareas";
-import Logo from "./components/Logo";
+import Tareas from './pages/Tasks'
+import LoginPage from './pages/LoginPage'
+import RegisterPage from './pages/RegisterPage'
 
-function App() {
+import AccountState from './states/AccountState'
+
+function App () {
   return (
-    <div className="aplicacion-tareas">
-      <Logo />
-      <div className="tareas-lista-principal">
-        <h1>Mis tarea</h1>
-        <ListaDeTareas />
-      </div>
-    </div>
-  );
+    <BrowserRouter>
+      <AccountState>
+        <Routes>
+          <Route path='/' element={<LoginPage />} />
+          <Route path='/register' element={<RegisterPage />} />
+          <Route path='/tareas' element={<Tareas />} />
+        </Routes>
+      </AccountState>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

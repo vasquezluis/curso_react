@@ -1,0 +1,16 @@
+#### estilos simples
+  -> water.css
+
+#### useRef es para referenciar valores -> no solo elementos del DOM
+  -> const lastInput = useRef(input)
+
+#### useMemo se usa para no tener que recalcular algo cuando se renderiza un componente
+  -> const sortedMovies = useMemo(() => {
+
+  }, [sort, movies])
+
+#### useCallback es lo mismo que useMemo pero para funciones
+  -> 
+
+#### debounce -> hacer algo hasta que el usuario deje de escribir
+  -> 
