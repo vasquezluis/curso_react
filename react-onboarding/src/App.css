@@ -1,0 +1,12 @@
+/* Override styles in your global.css or equivalent */
+.joyride-tooltip {
+  @apply bg-pink-500 text-white max-w-xs overflow-auto;
+}
+
+.joyride-button--next {
+  @apply bg-green-700 text-xs;
+}
+
+.joyride-button--back {
+  @apply text-red-800 text-xs hidden;
+}
